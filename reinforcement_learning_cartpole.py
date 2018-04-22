@@ -12,7 +12,7 @@ def discount_rewards(rewards,discount_rate):
 		cumulative_rewards=rewards[step]+cumulative_rewards*discount_rate
 		discounted_rewards[step]=cumulative_rewards
 	return	discounted_rewards
-def	discount_and_normalize_rewards(all_rewards,	discount_rate):
+def discount_and_normalize_rewards(all_rewards,	discount_rate):
 	all_discounted_rewards=[discount_rewards(rewards, discount_rate) for rewards in all_rewards]
 	flat_rewards=np.concatenate(all_discounted_rewards)				
 	reward_mean=flat_rewards.mean()
