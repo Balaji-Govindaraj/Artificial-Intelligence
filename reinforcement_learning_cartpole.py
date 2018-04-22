@@ -5,7 +5,7 @@ from tensorflow.contrib.layers import fully_connected
 import numpy as np
 
 
-def	discount_rewards(rewards,discount_rate):
+def discount_rewards(rewards,discount_rate):
 	discounted_rewards=np.empty(len(rewards))
 	cumulative_rewards=0
 	for	step in	reversed(range(len(rewards))):
@@ -17,7 +17,7 @@ def	discount_and_normalize_rewards(all_rewards,	discount_rate):
 	flat_rewards=np.concatenate(all_discounted_rewards)				
 	reward_mean=flat_rewards.mean()
 	reward_std=flat_rewards.std()
-	return	[(discounted_rewards-reward_mean)/reward_std for discounted_rewards	in	all_discounted_rewards]
+	return	[(discounted_rewards-reward_mean)/reward_std for discounted_rewards in all_discounted_rewards]
 
 
 n_inputs=4
@@ -41,7 +41,7 @@ grads_and_vars_feed=[]
 for	grad,variable	in	grads_and_vars:
 	gradient_placeholder=tf.placeholder(tf.float32,shape=grad.get_shape())
 	gradient_placeholders.append(gradient_placeholder)
-	grads_and_vars_feed.append((gradient_placeholder,	variable))
+	grads_and_vars_feed.append((gradient_placeholder,variable))
 training_op	=	optimizer.apply_gradients(grads_and_vars_feed)
 init	=	tf.global_variables_initializer()
 saver	=	tf.train.Saver()
