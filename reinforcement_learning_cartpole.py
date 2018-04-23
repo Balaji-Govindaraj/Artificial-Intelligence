@@ -49,9 +49,9 @@ saver=tf.train.Saver()
 #print discount_and_normalize_rewards([[10,0,-50],[10,20]],discount_rate=0.8)
 
 
-n_iterations=2						
-n_max_steps=10						
-n_games_per_update=10	
+n_iterations=250						
+n_max_steps=100						
+n_games_per_update=100	
 save_iterations=10				
 discount_rate=0.95
 env=gym.make('CartPole-v0')
