@@ -6,5 +6,6 @@ Course on Artificial-Intelligence:
 
 3. Reinforcement Learning model for cartpole game which is trying to learn from rewards+observation and then making its rewards maximum as the iteration proceeds.
 
+4. Recurrent Networks Contents for static unrolling, dynamic unrolling, Variable input length based dynamic unrolling, MNIST data classification based on RNN.
 
 Still many more algorithms will be added soon.....
