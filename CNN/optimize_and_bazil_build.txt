@@ -1,0 +1,12 @@
+1. Freeze the graph and create pb file using the freeze class
+
+2. Optimize the frozen graph for inferece
+	
+
+balaji@mypc:/usr/local/lib/python2.7/dist-packages/tensorflow/python/tools$ python optimize_for_inference.py --input=/home/balaji/Downloads/balaji/tensorflow_code/custom_network/code/model/best/frozen_model.pb --output=/home/balaji/Downloads/balaji/tensorflow_code/custom_network/code/model/best/optimized_frozen_model.pb --frozen_graph=True --input_names=input --output_names=output_layer/BiasAdd
+
+
+3. Quantizing - Decreases accuracy but increases speed - Mostly used for mobile applications
+
+balaji@mypc:~/Downloads/balaji/tensorflow$ bazel build tensorflow/tools/graph_transforms:transform_graph && bazel-bin/tensorflow/tools/graph_transforms/transform_graph --in_graph=/home/balaji/Downloads/balaji/tensorflow_code/custom_network/code/model/best/optimized_frozen_model.pb --out_graph=/home/balaji/Downloads/balaji/tensorflow_code/custom_network/code/model/best/optimized_frozen_model_mobile.pb --inputs=input --outputs=output_layer/BiasAdd --transforms='quantize_weights'
+
