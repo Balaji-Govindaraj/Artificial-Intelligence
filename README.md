@@ -8,4 +8,6 @@ Course on Artificial-Intelligence:
 
 4. Recurrent Networks Contents for static unrolling, dynamic unrolling, Variable input length based dynamic unrolling, MNIST data classification based on RNN.
 
+5. Added Convolutional Neural Network which i have built from scratch which will be very much useful for beginners. CNN contains how to create dataset, load and transform data and then train with the network. Finally how to freeze the model, optimize for inference and quantize for low processing systems.
+
 Still many more algorithms will be added soon.....
