@@ -9,3 +9,6 @@ I have also create a logs for tensorboard visualization for loss calculation.
 To see the loss in tensorboard, run the following command.
 	go the CNN directory
 	tensorboard --logdir logs
+Then Freeze the graph and create pb file and then test it
+Then optimize for inference
+Then Quantize for using in low end systems
